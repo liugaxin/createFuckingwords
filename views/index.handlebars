@@ -1,0 +1,51 @@
+{{!-- <!-- body -->
+<div class="card bg-light">
+    <br>
+    <div class="title" align="center"><font color="black"><h1> 你想對誰說幹話</h1></font></div>
+    <hr>
+    <br>
+    <form class="flex-column" method="POST" action="/" style="margin: 10px;">
+    <fieldset>
+    <div class="left-image" align="center">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg" alt="engineer" height="300">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg" alt="designer" height="300">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg" alt="founder"  height="300">
+        <br>
+        <br>
+        </div>
+        <div align="rig" ><input type="checkbox">工程師<input type="checkbox">設計師<input type="checkbox">創業家</div>
+         <div class="button">
+        <button class="btn btn-success" type="submit">產生幹話</button>
+    </form>
+    </fieldset>
+    <br>
+    </div>
+</div> --}}
+<div class="card bg-white">
+    <form method="POST" action="/">
+        <table border="0" align="center">
+            <br>
+            <tr align="center" color><td colspan="3"><h2>對於幹話，一個尷尬又不失禮貌的微笑</h2><hr></td></tr>
+            <tr>
+                <td><img src="http://www.queen-of-theme-party-games.com/images/stone-face-silly-game-3.jpg" alt="engineer" height="280"></td>
+                <td><img src="https://cdn.mos.cms.futurecdn.net/pJkdAByPcyFqLxR5nu7eig-1024-80.jpg" alt="designer" height="280"></td>
+                <td><img src="https://youngwritersproject.org/sites/default/files/styles/oyster_node_slider/public/embarrassed.jpg?itok=91YcvBs6" alt="founder" height="280"></td>
+            </tr>
+            <tr>
+                <td align="center"><br><input type="checkbox" name="engineer" id="engineer" {{#if options.engineer}}checked{{/if}}>&nbsp;&nbsp;工程師&nbsp;&nbsp;</td>
+                <td align="center"><br><input type="checkbox" name="designer" id="designer" {{#if options.designer}}checked{{/if}}>&nbsp;&nbsp;設計師&nbsp;&nbsp;</td>
+                <td align="center"><br><input type="checkbox" name="entrepreneur" id="entrepreneur" {{#if options.entrepreneur}}checked{{/if}}>&nbsp;&nbsp;創業家&nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+                <td><br><button class="btn btn-success">HAHA Fucking Words</button></td>
+            </tr>
+            <tr>
+                {{#if mrmr }}
+                <td><br><div class="alert alert-info col-sm-8" type="submit">
+                    <code>{{ mrmr }}</code></div></td>
+                {{/if}}
+            </tr>
+        </table>
+    </form>
+    <br>
+</div>
